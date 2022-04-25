@@ -115,7 +115,8 @@
 
 #### < 추가 공통 기능 >
     1. 다크 / 라이트 모드
-    2. 회원가입 / 로그인 
+    2. 회원가입 / 로그인 - oauth
+    3. 사진첨부 : 
    
 
 -------------    
@@ -129,10 +130,12 @@
 >      프레임워크 : React
 >      css : tailwind vs emotion
 >      상태관리 : Redux
+>      fetch : react-query 
 
 >#### BE
->     배포 : cloudflare vs firebase 
->     fetch : react-query   
+>     배포 : Firebase 
+>     DB : NoSQL - Firebase DB
+>       
 
 -------------  
 ### 🔥
