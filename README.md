@@ -134,7 +134,7 @@
 
 >#### BE
 >     배포 : Firebase 
->     DB : NoSQL - Firebase DB
+>     DB : Cloud Firestore(DB of Firebase)
 >       
 
 -------------  
