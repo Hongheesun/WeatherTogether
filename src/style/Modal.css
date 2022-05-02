@@ -1,0 +1,60 @@
+.addPage {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  /* padding: 30px; */
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.addPageBack {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.closeBtn {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+
+  border: 2px solid #5a8cf1;
+  border-radius: 10px;
+}
+
+.submitBtn {
+  border-style: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: antiquewhite;
+  cursor: pointer;
+}
+
+.label,
+.submitBtn,
+.closeBtn {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.addPageBack {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5%;
+}
