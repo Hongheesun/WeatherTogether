@@ -1,0 +1,331 @@
+a {
+  text-decoration: none;
+}
+body {
+  background-color: #fff;
+}
+
+.diary > h4 {
+  color: #000;
+}
+
+.App {
+  text-align: center;
+  max-width: 728px;
+  margin: 0 auto;
+}
+
+.App header {
+  background-color: #fff;
+  height: 10vh;
+  min-height: 50px;
+  color: rgb(255, 176, 6);
+  position: fixed;
+  width: 100%;
+  max-width: 728px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.App section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+main {
+  padding: 10px;
+  height: 80vh;
+  margin: 10vh 0 10vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+main::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+/* main::-webkit-scrollbar-track {
+  background: #1e1e24;
+} */
+
+main::-webkit-scrollbar-thumb {
+  background: #014778;
+}
+
+.menu1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-width: 0;
+  /* transition: 0.5s ease; */
+  z-index: 1;
+  background-color: #fff;
+}
+
+.burger-icon {
+  cursor: pointer;
+  /* display: inline-block;
+  position: absolute; */
+  z-index: 2;
+  padding: 8px 0;
+  top: 4px;
+  right: 4px;
+  /* user-select: none; */
+  width: auto;
+  /* margin: 0; */
+}
+
+.burger-icon .burger-sticks {
+  background-color: #000;
+  display: block;
+  height: 2.5px;
+  position: relative;
+  /* transition: background 0.2s ease-out; */
+  width: 23px;
+}
+
+.burger-icon .burger-sticks:before,
+.burger-icon .burger-sticks:after {
+  background: #000;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.burger-icon .burger-sticks:before {
+  top: 8px;
+}
+
+.burger-icon .burger-sticks:after {
+  top: -8px;
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked ~ .menu {
+  max-width: 200px;
+}
+
+.burger-check:checked ~ .burger-icon .burger-sticks {
+  background: transparent;
+}
+
+.burger-check:checked ~ .burger-icon .burger-sticks:before {
+  transform: rotate(-45deg);
+}
+
+.burger-check:checked ~ .burger-icon .burger-sticks:after {
+  transform: rotate(45deg);
+}
+
+.burger-check:checked ~ .burger-icon:not(.steps) .burger-sticks:before,
+.burger-check:checked ~ .burger-icon:not(.steps) .burger-sticks:after {
+  top: 0;
+}
+
+/* .mainpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+.mainpageWrapper {
+  /* height: vh; */
+
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+}
+
+.mainpageWrapper button {
+  background-color: #fff;
+  color: #000;
+}
+
+form {
+  margin: 0 10px;
+  height: vh;
+  /* position: fixed; */
+  bottom: 0;
+  background-color: rgb(143, 230, 252);
+  width: 100%;
+  max-width: 728px;
+  display: flex;
+  font-size: 14px;
+  /* margin-bottom: 40px; */
+  /* margin: 0 auto; */
+  /* border: solid #000 0.5px;
+  border-radius: 10%; */
+}
+
+form button {
+  width: 20%;
+  background-color: #75efff;
+  color: #000;
+}
+
+input {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1.5rem;
+  background: #ffffff;
+  color: #000;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+}
+
+button {
+  background-color: #282c34;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.25rem;
+  border-radius: 5px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sign-in {
+  color: #282c34;
+  background: rgb(249, 224, 96);
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+ul,
+li {
+  text-align: left;
+  list-style: none;
+}
+
+.messagesP {
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent .messagesP {
+  color: white;
+  background: #0b93f6;
+  align-self: flex-end;
+}
+.received .messagesP {
+  background: #e5e5ea;
+  color: black;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
+}
+
+.weatherP {
+  color: #000;
+}
+
+/* ////// 메인 홈 ///////// */
+.home {
+  max-width: 728px;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weatherInfo {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+}
+
+.Celsius {
+  font-size: 70px;
+  color: #000;
+}
+
+.rightBtn {
+  align-self: flex-end;
+}
+
+.home button {
+  background: none;
+  color: #000;
+}
+
+.home .dailyMemo {
+  width: 100%;
+  max-width: 728px;
+  /* border: 1px solid #282c34; */
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.home .dailyMemo span {
+  margin-right: 40px;
+}
+
+.home .footer {
+  display: flex;
+  flex-direction: column;
+}
+/* ////// 메인 홈 ///////// */
+
+/* //////////  다이어리 룸   /////////// */
+.diaryUl {
+  display: inline;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.diaryBox {
+  color: #000;
+  width: 200px;
+  height: 200px;
+  background-color: deepskyblue;
+}
+
+/* .diaryBox {
+  width: 200px;
+  height: 200px;
+} */
